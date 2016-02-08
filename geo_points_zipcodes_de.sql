@@ -15,6 +15,24 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
+-- Table structure for table `geo_koordinaten`
+--
+
+DROP TABLE IF EXISTS `geo_koordinaten`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `geo_koordinaten` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `zip` varchar(10) COLLATE utf8_unicode_ci NOT NULL,
+  `location_name` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `lat` double NOT NULL,
+  `lon` double NOT NULL,
+  `updated_at` datetime NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=17218 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
 -- Dumping data for table `geo_koordinaten`
 --
 
@@ -34,4 +52,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2016-02-08 13:32:35
+-- Dump completed on 2016-02-08 14:24:21
