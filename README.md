@@ -5,4 +5,4 @@ Das SQL-File in diesem Repository enthält sämtliche Kooordinaten deutscher Pos
 
 Fragen, Anregungen und Fehler bitte unter **Issues** melden.
 
-Mehr von webworks nürnberg gibt's auf unserer Website unter https://www.webworks-nuernberg.de/
+Mehr von webworks nürnberg gibt's auf unserer Website unter https://www.webworks-nuernberg.de/aktuelles/thema/open-source/3
