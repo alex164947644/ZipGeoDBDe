@@ -1,0 +1,23 @@
+#!/usr/bin/env php
+<?php
+
+define('DIR', __DIR__);
+define('TOOLS_DIR',  DIR. DIRECTORY_SEPARATOR. 'tools');
+define('LIB_DIR',  DIR. DIRECTORY_SEPARATOR. 'lib');
+
+require_once TOOLS_DIR. DIRECTORY_SEPARATOR. 'config.php';
+
+$cli = new Cli([]);
+
+$cli->print_line('');
+$cli->print_line('               '. Cli::color_str('ZipGeoDBDe CLI Tool', Cli::ColorBgBlue));
+$cli->print_line(Cli::color_str('------------------------------------------------', Cli::ColorBgBlack));
+
+$cli->print_line('Verbinde mit Datenbank:');
+$cli->print_line('  > Host:     '. Cli::color_str($config['host'], Cli::ColorFgBrown));
+$cli->print_line('  > User:     '. Cli::color_str($config['user'], Cli::ColorFgBrown));
+$cli->print_line('  > Password: '. Cli::color_str('*****', Cli::ColorFgBrown));
+$cli->print_line('  > Database: '. Cli::color_str($config['db'], Cli::ColorFgBrown));
+
+$md = new \Webworks\GeoDB\Tools\MoveData($cli, $config);
+$md->run();
